@@ -3,6 +3,7 @@ import bodyParser from 'body-parser'
 
 import database from './config/database'
 import userRoute from './routes/userRoute'
+import postRoute from './routes/postRoute'
 
 //Configuração da Aplicação (Linhas: 8-13)
 const app = Express()
@@ -13,6 +14,7 @@ app.set('json spaces', 2);
 
 //Rota utilizada neste projeto (Linha: 15-17)
 userRoute(app)
+postRoute(app)
 
 app.get('/', (req, res) => res.send('Olá mundo pelo Express!'))
 
